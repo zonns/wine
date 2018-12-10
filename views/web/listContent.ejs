@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>大洋洲红酒网站</title>
+    <link rel="stylesheet" href="/plugin/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/statics/css/index.css">
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="/statics/css/ie-index.css">
+    <![endif]-->
+</head>
+
+<body>
+    <div class="index_bg">
+        <div class="header_bg index_header text-center">
+            <img src="/statics/images/index_headerimg.png" alt="">
+            <ul class="nav index_nav">
+                <li><a href="/<%= language %>/wine/"><%= i18n.HOME %></a></li>
+                <li><a href="/<%= language %>/wine/list"><%= i18n.WINE %></a><i class="active"></i></li>
+                <li><a href="/<%= language %>/wine/story"><%= i18n.STORY %></a></li>
+            </ul>
+        </div>
+        <div class="container-fluid text-center buy-section">
+            <div class="container buy-section-msg">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 wine-pic-box">
+                        <img class="wine-pic" src="<%=wines.avatar%>" alt="">
+                    </div>
+                    <div class="col-md-8 col-sm-8 text-left wine-msg">
+                        <h1><%=wines.title%></h1>
+                        <div class="color-wine-msg">
+                            <span><%=wines.winery%></span> | <span><%=wines.variety%></span> | <span><%=wines.years%></span>
+                        </div>
+                        <div class="line"></div>
+                        <div class="color-msg">
+                            <p>
+                                <%-wines.description%>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-box text-right">
+                    <a href="javascript:history.back(-1)"><%= i18n.BACK %></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer text-center">
+            <ul>
+                <li><span><%= i18n.TEL %>：</span> <span class="tel-num">+61 458 907 888</span></li>
+                <li><span><%= i18n.EMAIL %>：</span> <span>ronghui829@gmail.com</span></li>
+                <li><span><%= i18n.ADDRESS %>：</span> <span>1003/108 Haines St NORTH MELBOURNE VIC 3051</span></li>
+            </ul>
+        </div>
+</body>
+<script src="/plugin/jquery/dist/jquery.min.js"></script>
+<script src="/plugin/bootstrap/dist/js/bootstrap.min.js"></script>
+</html>

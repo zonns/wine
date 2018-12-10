@@ -1,0 +1,163 @@
+<%- include('../../layout/admin/header-nav') -%>
+
+<div class="content-wrapper">
+  <section class="content-header">
+    <h1>红酒信息列表</h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+      <li class="active">红酒信息</li>
+    </ol>
+  </section>
+  <section class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="box box-info">
+          <div class="box-body">
+            <div class="form-horizontal">
+              <div class="form-group col-md-6">
+                <label class="col-sm-3 control-label">红酒中文名称</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="cn_title" placeholder="红酒中文名称" value="<%=wine.cn_title%>">
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label class="col-sm-3 control-label">Name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="en_title" placeholder="Name" value="<%=wine.en_title%>">
+                </div>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label class="col-sm-3 control-label">酒庄</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="cn_winery" placeholder="酒庄" value="<%=wine.cn_winery%>">
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label class="col-sm-3 control-label">Winery</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="en_winery" placeholder="Winery" value="<%=wine.en_winery%>">
+                </div>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label class="col-sm-3 control-label">葡萄品种</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="cn_variety" placeholder="葡萄品种" value="<%=wine.cn_variety%>">
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label class="col-sm-3 control-label">Variety</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="en_variety" placeholder="Variety" value="<%=wine.en_variety%>">
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label class="col-sm-3 control-label">年份（Year）</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="years" placeholder="Year" value="<%=wine.years%>">
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label class="col-sm-3 control-label">图片</label>
+                <div class="col-sm-9">
+                  <div class="col-sm-8" style="padding-left:0">
+                    <input id="avatar" type="text" value="<%=wine.avatar%>" class="col-sm-6" />
+                    <input id="fileupload" class="col-sm-6" type="file" name="files[]" data-url="/fileUpload" />
+                  </div>
+                  <div class="col-sm-4">
+                      <div id="avatar-preview">
+                          <img width="100%" src="<%=wine.avatar%>" />
+                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group col-md-12">
+                <label class="col-sm-1 control-label">描述</label>
+                <div class="col-sm-11">
+                  <script id="cn_description" name="content" type="text/plain"><%-wine.cn_description%></script>
+                </div>
+              </div>
+              <div class="form-group col-md-12">
+                <label class="col-sm-1 control-label">Description</label>
+                <div class="col-sm-11">
+                  <script id="en_description" name="content" type="text/plain"><%-wine.en_description%></script>
+                </div>
+              </div>
+              <div class="col-md-12 text-center">
+                <input type="hidden" id="wineId" value="<%=wine.id%>" />
+                <button class="btn btn-info btn-flat" onclick="save()">保存</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<%- include('../../layout/admin/footer') -%>
+<script src="/statics/plugin/ueditor/ueditor.config.js"></script>
+<script src="/statics/plugin/ueditor/ueditor.all.js"></script>
+<script src="/plugin/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+<script src="/plugin/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
+<script src="/plugin/blueimp-file-upload/js/jquery.fileupload.js"></script>
+<script>
+  var cnUE,enUE
+
+  function save() {
+    var en_title = $('#en_title').val()
+    var cn_title = $('#cn_title').val()
+    var cn_winery = $('#cn_winery').val()
+    var en_winery = $('#en_winery').val()
+    var cn_variety = $('#cn_variety').val()
+    var en_variety = $('#en_variety').val()
+    var cn_description = cnUE.getContent()
+    var en_description = enUE.getContent()
+    var years = $('#years').val()    
+    var avatar = $('#avatar').val()
+
+    var data = {
+      cn_title: cn_title,
+      en_title: en_title,
+      cn_winery: cn_winery,
+      en_winery: en_winery,
+      cn_variety: cn_variety,
+      en_variety: en_variety,
+      cn_description: cn_description,
+      en_description: en_description,
+      years: years,
+      avatar: avatar
+    }
+    console.log(data)
+    var method = $('#wineId').val() ? 'PUT' : 'POST'
+    $.ajax({
+      type: method,
+      url: '/admin/wine/' + $('#wineId').val(),
+      data: data,
+      dataType: 'json'
+    }).done(function() {
+      window.location.href = '/admin/'
+    }).fail(function() {
+      console.log('fail')
+    })
+  }
+
+  $(function(){
+    cnUE = UE.getEditor('cn_description')
+    enUE = UE.getEditor('en_description')
+
+    $('#fileupload').fileupload({
+        dataType: 'json',
+        done: function (e, data) {
+          console.log(data.result.files)
+          var fileInfo = data.result.files[0]
+          $('#avatar').val(fileInfo.absoluteUrl)
+          var html = '<img width="100%" src="' + fileInfo.absoluteUrl + '" />'
+          console.log(html)
+          $('#avatar-preview').html(html)
+        }
+    });
+
+  })
+</script>

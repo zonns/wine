@@ -1,0 +1,26 @@
+[
+  {
+    "en_title": "Lake Cooper Well Rhapsody Shiraz",
+    "cn_title": "测试",
+    "en_winery": "Lakecooper",
+    "cn_winery": "澳洲库珀庄园",
+    "en_variety": "Shiraz",
+    "cn_variety": "西拉",
+    "years": "2016",
+    "avatar": "http://localhost:3000/statics/images/wine-02.png",
+    "en_description": "Australia's exclusive a continent, seagirt, rain water is rich, good stability, sunny weather, land mineral content is rich",
+    "cn_description": "澳大利亚独享一洲，四面环海、雨水丰富，气候优良稳定、阳光充足、土地矿物质含量丰富，加之地广人稀，基本属于零污染。因此能种出世界上最好的葡萄。"
+  },
+  {
+    "en_title": "Lake Cooper Well Rhapsody Shiraz",
+    "cn_title": "测试",
+    "en_winery": "Lakecooper",
+    "cn_winery": "澳洲库珀庄园",
+    "en_variety": "Shiraz",
+    "cn_variety": "西拉",
+    "years": "2016",
+    "avatar": "http://localhost:3000/statics/images/wine-01.png",
+    "en_description": "Australia's exclusive a continent, seagirt, rain water is rich, good stability, sunny weather, land mineral content is rich",
+    "cn_description": "澳大利亚独享一洲，四面环海、雨水丰富，气候优良稳定、阳光充足、土地矿物质含量丰富，加之地广人稀，基本属于零污染。因此能种出世界上最好的葡萄。"
+  }
+]

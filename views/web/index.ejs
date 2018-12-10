@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>大洋洲红酒网站</title>
+    <link rel="stylesheet" href="/plugin/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/statics/css/index.css">
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="/statics/css/ie-index.css">
+    <![endif]-->
+</head>
+
+<body class="index_body">
+    <div class="index_bg">
+        <div class=" index_header text-center">
+            <img src="/statics/images/index_headerimg.png" alt="">
+            <ul class="nav index_nav">
+                <li><a href="/<%= language %>/wine/"><%= i18n.HOME %></a><i class="active"></i></li>
+                <li><a href="/<%= language %>/wine/list"><%= i18n.WINE %></a></li>
+                <li><a href="/<%= language %>/wine/story"><%= i18n.STORY %></a></li>
+            </ul>
+            <div class="change-lang color-44">
+                <a href="/en/wine/" <% if(language == "en") { %> class="active" <% } %>> <%= i18n.NAME_EN %> </a> 
+                <span class="color-44">|</span> 
+                <a href="/cn/wine/" <% if(language == "cn") { %> class="active" <% } %>> <%= i18n.NAME_CN %> </a>
+            </div>
+        </div>
+        <div class="container text-center">
+            <div class="index_section">
+                <h1><%= i18n.INDEX_TITLE %></h1>
+                <p><%= i18n.INDEX_MSG %></p>
+                <div class="index_search">
+                    <i class=""></i>
+                    <span><%= i18n.INDEX_SIGN %></span>
+                    <!-- <input type="text" placeholder="FIND YOUR WINE" class="" > -->
+                </div>
+            </div>
+        </div>
+        <div class="footer text-center">
+            <ul>
+                <li><span><%= i18n.TEL %>：</span> <span class="tel-num">+61 458 907 888</span></li>
+                <li><span><%= i18n.EMAIL %>：</span> <span>ronghui829@gmail.com</span></li>
+                <li><span><%= i18n.ADDRESS %>：</span> <span>1003/108 Haines St NORTH MELBOURNE VIC 3051</span></li>
+            </ul>
+        </div>
+</body>
+<script src="/plugin/jquery/dist/jquery.min.js"></script>
+<script src="/plugin/bootstrap/dist/js/bootstrap.min.js"></script>
+</html>

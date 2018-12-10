@@ -1,0 +1,227 @@
+body {
+    position: relative;
+    background: #000;
+    min-width: 970px;
+}
+.font-color {
+    color: #e4c89a;
+}
+.index_bg {
+    background: url(/statics/images/index_bg.png) no-repeat center center;
+    width: 100%;
+    height: 1080px;
+}
+.index_header {
+    padding-top: 32px;
+    padding-bottom: 30px;
+}
+.change-lang {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    border: 1px solid #443a2c;
+    padding: 2px 10px;
+}
+.color-44 {
+    color: #645844;
+}
+.color-44 a {
+    color: #645844;
+}
+.change-lang a.active {
+    color: #e4c89a;
+}
+.change-lang a:hover {
+    color: #e4c89a;
+}
+.index_nav li {
+    display: inline-block;
+    padding: 0 30px;
+}
+.index_nav li a{
+    color: #e4c89a;
+    position: relative;
+    font-style: italic;
+    font-size: 18px;
+    padding: 10px 35px;
+}
+.index_nav:hover li a {
+    background: none;
+}
+.index_nav li .active {
+    position: absolute;
+    display: inline-block;
+    width: 116px;
+    height: 11px;
+    bottom: -7px;
+    background: url(/statics/images/index_navactive.png) no-repeat center center;
+    left: 50%;
+    margin-left: -57px;
+}
+.index_section {
+    color: #fff;
+}
+.index_section h1 {
+    margin-top: 133px;
+    font-size: 45px;
+}
+.index_section p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+.index_search {
+    display: inline-block;
+    margin-top: 190px;
+    padding: 11px;
+    border: 2px solid #fff;
+    width: 340px
+}
+.index_search i {
+    display: inline-block;
+    background: url(/statics/images/index_icon_search.png) no-repeat center center;
+    width: 29px;
+    height: 29px;
+    margin-left: 5px;
+}
+.index_search span {
+    background: none;
+    outline: none;
+    border: 0;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 29px;
+    font-size: 24px;
+    margin-left: 20px;
+    width: 244px;
+    padding-right: 30px;
+}
+.footer {
+    background: #1e1118;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 60px;
+    color: #7c6d56;
+}
+.footer ul {
+    margin-bottom:0;
+    list-style: none;
+}
+.footer ul li {
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 10px;
+}
+.footer .tel-num {
+    color: #cfbf8e;
+    font-size: 23px;
+}
+.header_bg {
+    background: url(/statics/images/common_bg.png) no-repeat center center;
+    width: 100%;
+    height: 183px;
+}
+.buy-section {
+    background: #fff;
+}
+.buy-section-msg {
+    height: 834px;
+}
+.line {
+    border-top: 1px solid #c9c6c2;
+    margin-bottom: 20px;
+}
+.color-msg {
+    color: #787878;
+}
+.wine-pic-box {
+    margin-top: 192px;
+}
+.wine-pic {
+    height: 100%;
+}
+.wine-msg {
+    margin-top: 50px;
+}
+.wine-msg h1 {
+    font-size: 50px;
+    line-height: 70px;
+}
+.color-wine-msg {
+    color: #a47d70;
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.color-msg p {
+    margin: 0;
+    line-height: 30px;
+}
+.btn-box {
+    margin-top: 50px;
+}
+.btn-box a {
+    color: #000;
+    padding: 5px 13px;
+    background: #fafafa;
+    border: 1px solid #eeeeee;
+    outline: none;
+    text-decoration: none;
+}
+.buy_section_bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: url(/statics/images/buy_bg.png) no-repeat center center;
+    height: 650px;
+}
+.buy-title {
+    margin-top: 70px;
+}
+.buy-title h1 {
+    font-size: 45px;
+}
+.color-title {
+    color: #fff;
+}
+.buy-wines {
+    margin-top: 60px;
+}
+.color-wine {
+    color: #a47d70;
+}
+.buy-wines .wine-item {
+    margin-top:50px;
+}
+.wine-item .wine-item-box {
+    height: 480px;
+}
+.wine-item .wine-item-box img {
+    height: 100%;
+}
+.wine-item a {
+    border: 0;
+    display: inline-block;
+    background: #967B4F;
+    color: #fff;
+    line-height: 32px;
+    padding: 1px 16px;
+}
+.story-section {
+    background: #37251F;
+}
+.story_section_bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: url(/statics/images/story_bg.png) no-repeat center center;
+    height: 650px;
+}
+.story-title {
+    height: 650px;
+    padding-top: 170px;
+}
+.story-content {
+    color: #fff;
+    font-size: 16px;
+}

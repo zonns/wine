@@ -1,0 +1,47 @@
+{
+  "name": "wine",
+  "version": "1.0.0",
+  "description": "湖南省大洋洲进出口商贸有限公司",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "lint": "./node_modules/.bin/eslint **.js",
+    "initial": "node ./install/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.huilonggroup.cn:huilong/wine.git"
+  },
+  "author": "Huilong",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "admin-lte": "^2.4.8",
+    "bluebird": "^3.5.2",
+    "blueimp-file-upload": "^9.26.0",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^3.3.7",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "jquery": "^1.12.4",
+    "jquery-file-upload-middleware": "^0.1.8",
+    "md5": "^2.2.1",
+    "moment": "^2.22.2",
+    "morgan": "^1.9.1",
+    "mysql2": "^1.6.1",
+    "sequelize": "^4.41.0",
+    "ueditor": "^1.2.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "nodemon": "^1.18.5"
+  }
+}

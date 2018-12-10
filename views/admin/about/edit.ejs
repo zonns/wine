@@ -1,0 +1,71 @@
+<%- include('../../layout/admin/header-nav') -%>
+
+<div class="content-wrapper">
+  <section class="content-header">
+    <h1>关于我们</h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+      <li class="active">红酒信息</li>
+    </ol>
+  </section>
+  <section class="content">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="box box-info">
+          <div class="box-body">
+            <div class="form-horizontal">
+              <div class="form-group col-md-12">
+                <label class="col-sm-1 control-label">关于我们</label>
+                <div class="col-sm-11">
+                  <script id="cn_value" name="content" type="text/plain"><%-story.cn_value%></script>
+                </div>
+              </div>
+              <div class="form-group col-md-12">
+                <label class="col-sm-1 control-label">About us</label>
+                <div class="col-sm-11">
+                  <script id="en_value" name="content" type="text/plain"><%-story.en_value%></script>
+                </div>
+              </div>
+              <div class="col-md-12 text-center">
+                <button class="btn btn-info btn-flat" onclick="save()">保存</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<%- include('../../layout/admin/footer') -%>
+<script src="/statics/plugin/ueditor/ueditor.config.js"></script>
+<script src="/statics/plugin/ueditor/ueditor.all.js"></script>
+<script>
+  var cnUE,enUE
+
+  function save() {
+    var cn_value = cnUE.getContent()
+    var en_value = enUE.getContent()
+
+    var data = {
+      cn_value: cn_value,
+      en_value: en_value
+    }
+    $.ajax({
+      type: 'PUT',
+      url: '/admin/story',
+      data: data,
+      dataType: 'json'
+    }).done(function() {
+      alert('数据保存成功')
+      // window.location.href = '/admin/'
+    }).fail(function() {
+      console.log('fail')
+    })
+  }
+
+  $(function(){
+    cnUE = UE.getEditor('cn_value')
+    enUE = UE.getEditor('en_value')
+  })
+</script>
